@@ -5,11 +5,11 @@ all: mycat myls
 
 mycat: 
 
-	$(CC) $(CFLAGS) /mycat/mycat.c -o mycat
+	$(CC) $(CFLAGS) cat-util/mycat.c -o mycat
 
 myls: 
 
-	$(CC) $(CFLAGS) /myls/myls.c -o myls
+	$(CC) $(CFLAGS) ls-util/myls.c -o myls
 
 clean:
 

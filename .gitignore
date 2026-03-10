@@ -1,7 +1,10 @@
-/mycat/Makefile
-/mycat/mycat
-/mycat/TODO.txt
+cat-util/Makefile
+cat-util/mycat
+cat-util/TODO.txt
 
-/myls/myls
-/myls/makefile
-/myls/TODO.txt
+ls-util/myls
+ls-util/makefile
+ls-util/TODO.txt
+
+mycat
+myls
