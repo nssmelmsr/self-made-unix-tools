@@ -2,6 +2,9 @@ mycat/Makefile
 mycat/mycat
 mycat/TODO.txt
 
-Myls/myls
-Myls/makefile
-TODO.txt
+myls/myls
+myls/makefile
+myls/TODO.txt
+
+mycat
+myls
