@@ -13,4 +13,4 @@ gcc mycat.c -o mycat
 
 ## Usage
 
-./mycat file.txt
+./mycat [file]
