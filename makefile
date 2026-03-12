@@ -1,7 +1,7 @@
 CC = gcc
 CFLAGS = -Wall
 
-all: mycat myls
+all: mycat myls mywc
 
 mycat: 
 
@@ -11,6 +11,10 @@ myls:
 
 	$(CC) $(CFLAGS) ls-util/myls.c -o myls
 
+mywc: 
+
+	$(CC) $(CFLAGS) wc-util/mywc.c -o mywc
+
 clean:
 
-	rm -f mycat myls
+	rm -f mycat myls mywc
