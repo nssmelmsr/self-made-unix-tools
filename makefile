@@ -1,7 +1,11 @@
 CC = gcc
 CFLAGS = -Wall
 
-all: mycat myls mywc
+all: mycat myls mywc myps
+
+myps:
+
+	$(CC) $(CFLAGS) ps-util/myps.c -o myps
 
 mycat: 
 
