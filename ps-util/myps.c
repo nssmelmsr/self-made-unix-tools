@@ -17,7 +17,7 @@ int main(void){
 
     DIR *dir = opendir("/proc");
     ssize_t bytes_read;
-    char name[256];
+    
 
     if (dir == NULL){
     perror("opendir");
@@ -29,6 +29,7 @@ int main(void){
     while ((entry = readdir(dir)) != NULL){         //lee mientras hay archivos
         if (isnumber(entry->d_name)){
             char path[256];
+            char name[256];
             snprintf(path, sizeof(path), "/proc/%.243s/comm",entry->d_name); //256 - 12 ("/proc//com") -1 (bit de terminación) esto evita sobreflujo
             int fd = open(path,O_RDONLY);
             if (fd == -1){
@@ -46,9 +47,10 @@ int main(void){
                 name[bytes_read] = '\0';
                 printf("%s\t%s",entry->d_name,name);  
             }
-                
+            
             close(fd);
         }
     }
+    closedir(dir);
     return 0;    
 }
